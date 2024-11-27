@@ -135,7 +135,7 @@ citire_mat:
     movl elem, %ebx
     movl %ebx, (%edi, %ecx, 4)
 
-    incl %ecx
+    //incl %ecx
     jmp citire_mat
 program:
 
