@@ -21,7 +21,7 @@ This project is a fully functional two-player Tic-Tac-Toe game written in pure x
 ## 🛠️ Technical Details
 
 - **Architecture**: x86 (32-bit)
-- **Assembler**: NASM (Netwide Assembler)
+- **Assembler**: GNU
 - **System Calls**: Linux syscalls for I/O operations
 - **Pure Assembly**: No high-level language dependencies
 
@@ -29,18 +29,14 @@ This project is a fully functional two-player Tic-Tac-Toe game written in pure x
 
 ### Prerequisites
 
-- NASM assembler
-- ld linker (part of binutils)
+- GNU assembler
 - Linux operating system (or WSL on Windows)
 
 ### Build Instructions
 
 ```bash
-# Assemble the source code
-nasm -f elf32 tictactoe.asm -o tictactoe.o
-
-# Link the object file
-ld -m elf_i386 tictactoe.o -o tictactoe
+# Assemble the source code and link the object file
+gcc -m32 tic_tac_toe.s -o tictactoe -no-pie
 
 # Run the game
 ./tictactoe
